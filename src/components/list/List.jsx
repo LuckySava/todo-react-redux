@@ -46,7 +46,7 @@ const List = () => {
                             />
                             <span className="input-group-append">
 
-                                <button onClick={handleSearchClick} otype="button" class="btn bg-opacity-25 bg-success">
+                                <button onClick={handleSearchClick} otype="button" className="btn bg-opacity-25 bg-success">
                                     <Button.SearchButton />
                                 </button>
 

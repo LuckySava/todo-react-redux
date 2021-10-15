@@ -12,7 +12,6 @@ const Todo = ({ elem }) => {
     const [editMode, setEditMode] = useState(false);
     const [editBage, setEditBage] = useState(false);
 
-
     const handleOnChange = (e) => {
         setValue(e.target.value);
     }
@@ -33,7 +32,6 @@ const Todo = ({ elem }) => {
         } else {
             alert('Todo cannot be empty')
         }
-
     }
 
     return (
@@ -42,10 +40,10 @@ const Todo = ({ elem }) => {
             className={classNames(
                 'list-group-item',
                 `${style.todo}`,
-            
+
                 {
                     [`${style.disabled_elem}`]: elem.isInSearch,
-                
+
                 }
             )}
         >
@@ -58,8 +56,6 @@ const Todo = ({ elem }) => {
                         {elem.text}
                     </div>
                     :
-                    // <textarea onChange={handleOnChange} name="" id="" cols="30" rows="10">{value}</textarea>
-
                     <div className={`form-floating ${style.edit_mode_field}`}>
                         <textarea onChange={handleOnChange} className="form-control" placeholder="Leave a comment here" id="floatingTextarea" defaultValue={value} />
                         <label className={style.floating_label} htmlFor="floatingTextarea">Click "Save" button to close edit message</label>
@@ -67,7 +63,6 @@ const Todo = ({ elem }) => {
                     </div>
 
             }
-
 
             <div className={style.list_btns}>
 
@@ -80,13 +75,13 @@ const Todo = ({ elem }) => {
                 </button>
 
                 <button onClick={saveTodo.bind(null, elem.id)} type="button"
-                            className={classNames(
-                                'btn-success btn',
-                                {
-                                    [`${style.disabled_btn}`]: !editMode,
-                                
-                                }
-                            )}
+                    className={classNames(
+                        'btn-success btn',
+                        {
+                            [`${style.disabled_btn}`]: !editMode,
+
+                        }
+                    )}
                 >
                     <Button.SaveButton />
                 </button>

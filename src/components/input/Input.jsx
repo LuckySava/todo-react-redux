@@ -13,6 +13,7 @@ const Inupt = () => {
     const [error, setError] = useState(false);
 
     const clickHandle = (e) => {
+        
         e.preventDefault();
 
         if (value) {
@@ -21,19 +22,18 @@ const Inupt = () => {
                 text: value,
                 date: getDate()
             }))
-         } else {
+        } else {
             setError(true);
-         }
+        }
 
         setValue('')
     }
 
-
     const onChangeHandle = (e) => {
-        
+
         setValue(e.target.value)
 
-        if(error) setError(false);
+        if (error) setError(false);
     }
 
     return (
@@ -45,7 +45,7 @@ const Inupt = () => {
                 </div>
             }
             <form>
-                <div class="input-group mb-5">
+                <div className="input-group mb-5">
                     <input type="text" className={`form-control ${style.text_input}`}
                         placeholder="Enter you task here"
                         aria-describedby="button-addon2"

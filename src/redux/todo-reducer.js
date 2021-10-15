@@ -2,7 +2,7 @@ import ACTION from './actionsType';
 
 let initialState = {
     todos: [],
-    searchTitle: ''
+    searchTitle: '',
 }
 
 const todoReducer = (state = initialState, action) => {
@@ -42,7 +42,6 @@ const todoReducer = (state = initialState, action) => {
             }
 
         case ACTION.searchTodo:
-            // const newTodos = [...state.todos];
             return {
                 ...state,
                 todos: [...state.todos.map(elem => {

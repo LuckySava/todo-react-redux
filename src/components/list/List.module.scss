@@ -93,4 +93,8 @@
 .disabled_btn {
     pointer-events: none;
     opacity: .5;
+    &:outline, &:focus, &:active {
+        border: none;
+        outline: none;
+    }
 }
