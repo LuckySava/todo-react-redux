@@ -1,14 +1,14 @@
 // import logo from './logo.svg';
 import React from "react";
 import Header from './components/header/Header';
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch, HashRouter, BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import style from './App.module.scss'
 
 function App() {
   return (
-    <Router>
+    <HashRouter basename='/'>
 
       <Switch>
         <div className="container">
@@ -30,7 +30,7 @@ function App() {
         </div>
       </Switch>
 
-    </Router>
+    </HashRouter>
   );
 }
 
