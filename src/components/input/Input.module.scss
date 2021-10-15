@@ -1,0 +1,8 @@
+input.text_input[type="text"] {
+    height: 3rem;
+    &:focus, &:active {
+        outline: none !important;
+        border-color: #f9c914;
+        box-shadow: none;
+    }
+}
