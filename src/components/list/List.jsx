@@ -24,7 +24,6 @@ const List = () => {
         } else {
             setSearchErrorBage(true)
         }
-
     }
 
     const lists = todos.map(elem => <Todo key={elem.id} elem={elem} />);
@@ -46,7 +45,7 @@ const List = () => {
                             />
                             <span className="input-group-append">
 
-                                <button onClick={handleSearchClick} otype="button" className="btn bg-opacity-25 bg-success">
+                                <button onClick={handleSearchClick} otype="button" className={`btn bg-opacity-25 bg-success`}>
                                     <Button.SearchButton />
                                 </button>
 

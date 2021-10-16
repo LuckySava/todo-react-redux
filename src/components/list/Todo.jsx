@@ -53,7 +53,7 @@ const Todo = ({ elem }) => {
                     ?
                     <div className={style.text}>
                         <small className={style.todo_date}>{elem.date} {editBage && "(edited)"}</small>
-                        {elem.text}
+                        <div className={style.todo_content}>{elem.text}</div>
                     </div>
                     :
                     <div className={`form-floating ${style.edit_mode_field}`}>
@@ -66,17 +66,18 @@ const Todo = ({ elem }) => {
 
             <div className={style.list_btns}>
 
-                <button onClick={deleteTodoItem.bind(null, elem.id)} type="button" className="btn btn-danger">
+                <button onClick={deleteTodoItem.bind(null, elem.id)} type="button" className={`btn btn-danger ${style.general_btn}`}>
                     <Button.DeleteButtons />
                 </button>
 
-                <button onClick={getEditMode} type="button" className="btn btn-primary">
+                <button onClick={getEditMode} type="button" className={`btn btn-primary ${style.general_btn}`}>
                     <Button.EditButton />
                 </button>
 
                 <button onClick={saveTodo.bind(null, elem.id)} type="button"
                     className={classNames(
                         'btn-success btn',
+                        style.general_btn,
                         {
                             [`${style.disabled_btn}`]: !editMode,
 

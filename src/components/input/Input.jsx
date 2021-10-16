@@ -52,7 +52,7 @@ const Inupt = () => {
                         value={value}
                         onChange={onChangeHandle}
                     />
-                    <button onClick={clickHandle} className="btn btn-warning" type="submit" id="button-addon2">Button</button>
+                    <button onClick={clickHandle} className={`btn btn-warning ${style.btn_add}`} type="submit" id="button-addon2">Add Task</button>
                 </div>
             </form>
         </>

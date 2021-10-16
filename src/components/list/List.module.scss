@@ -4,8 +4,7 @@
     }
 }
 
-.todos{
-
+.todos {
     .todo {
         border-top-width: 1px !important;
         display: flex;
@@ -22,7 +21,6 @@
             background: #7080901f;
         }
     }
-    
 }
 
 .todo_date {
@@ -41,12 +39,11 @@
         color: #157347;
         font-size: 13px;
     }
-    
+
     textarea {
         resize: none !important;
         height: 5rem !important;
     }
-
 }
 
 .search_input {
@@ -56,34 +53,34 @@
     flex-direction: column;
 
     button {
-        margin-left: .5rem;
+        margin-left: 0.5rem;
     }
 
     input {
         width: 400px;
-        &:active, &:focus {
+        &:active,
+        &:focus {
             box-shadow: none;
-            border-color: rgba(25, 135, 84, .6) !important;
+            border-color: rgba(25, 135, 84, 0.6) !important;
         }
     }
 
     .search_bage {
         width: 10rem;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
     }
 
     .serch_text_wrap {
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         svg {
-            margin-left: .5rem;
+            margin-left: 0.5rem;
             cursor: pointer;
-            transition: .4s;
+            transition: 0.4s;
             &:hover {
-                opacity: .8;
+                opacity: 0.8;
             }
         }
     }
-
 }
 
 .search_wrapper {
@@ -92,9 +89,91 @@
 
 .disabled_btn {
     pointer-events: none;
-    opacity: .5;
-    &:outline, &:focus, &:active {
+    opacity: 0.5;
+    &:outline,
+    &:focus,
+    &:active {
         border: none;
         outline: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .todos {
+        .todo {
+            padding-top: 35px;
+        }
+    }
+
+    .list_btns {
+        button {
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn_add {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .search_input {
+        input {
+            width: auto;
+        }
+    }
+
+    .list_btns {
+        display: flex;
+        justify-content: flex-end;
+        .general_btn {
+            width: 25px;
+            height: 25px;
+            position: relative;
+
+            svg {
+                width: 15px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .todos {
+        .todo {
+            padding: .5rem;
+            padding-top: 2rem;
+        }
+    }
+
+    .edit_mode_field {
+        // width: 70%;
+
+        .floating_label {
+            font-size: 11px;
+        }
+    
+        textarea {
+            height: 6rem !important;
+        }
+    }
+
+    .todo_content {
+        padding-right: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 360px) {
+    .list_btns {
+        flex-wrap: wrap;
+
+        button {
+            margin-bottom: .5rem;
+        }
     }
 }
