@@ -11,7 +11,6 @@ export const updateTodo = (id, text) => ({ type: ACTION.updateTodo, payload: { i
 export const searchTodo = (text) => ({ type: ACTION.searchTodo, payload: text });
 
 export const fetchTodos = () => async(dispatch) =>{
-    console.log(555);
     try {
         const data = await fetch('https://jsonplaceholder.typicode.com/users/1/todos');
         const todos = await data.json();

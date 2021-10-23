@@ -6,20 +6,35 @@ export const Thunk = () => {
     const dispatch = useDispatch();
     const fakeTodos = useSelector(state => state.todoReducer.fakeTodos);
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     dispatch(fetchTodos())
+    // }, [])
+
+    const clickHandle = () => {
         dispatch(fetchTodos())
-    }, [])
+    }
 
     return (
-        <ul>
-            {
-                fakeTodos
-                    ? fakeTodos.map(todo => {
-                        return <li key={todo.id}>{todo.title}</li>
-                    })
-                    : <p>loading...</p>
-            }
-        </ul>
+        <>
+            <button
+                onClick={clickHandle}
+                className={`btn btn-warning`}
+                disabled={fakeTodos.length ? true : false}
+            >
+                Load Fake todos from server via API Call
+            </button>
+
+            <ul>
+                {
+                    fakeTodos
+                        ? fakeTodos.map(todo => {
+                            return <li key={todo.id}>{todo.title}</li>
+                        })
+                        : <p>loading...</p>
+                }
+            </ul>
+        </>
+
     )
 }
 

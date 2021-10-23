@@ -3,7 +3,7 @@ import ACTION from './actionsType';
 
 let initialState = {
     todos: [],
-    fakeTodos:null,
+    fakeTodos:[],
     searchTitle: '',
 }
 
