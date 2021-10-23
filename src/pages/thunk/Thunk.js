@@ -21,17 +21,11 @@ export const Thunk = () => {
                 className={`btn btn-warning`}
                 disabled={fakeTodos.length ? true : false}
             >
-                Load Fake todos from server via API Call
+                Load fake todos from server via API
             </button>
 
-            <ul>
-                {
-                    fakeTodos
-                        ? fakeTodos.map(todo => {
-                            return <li key={todo.id}>{todo.title}</li>
-                        })
-                        : <p>loading...</p>
-                }
+            <ul style={{marginTop: '20px'}}>
+                {fakeTodos.map(todo => <li key={todo.id}>{todo.title}</li>)}
             </ul>
         </>
 
