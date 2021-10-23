@@ -1,7 +1,9 @@
+import { act } from '@testing-library/react';
 import ACTION from './actionsType';
 
 let initialState = {
     todos: [],
+    fakeTodos:null,
     searchTitle: '',
 }
 
@@ -53,6 +55,9 @@ const todoReducer = (state = initialState, action) => {
                     return elem;
                 })]
             }
+
+        case ACTION.fetchTodo:
+            return {...state, fakeTodos: action.payload}
 
         default:
             console.log('nothing change in todoReducer');

@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import style from './Input.module.scss';
 import { addNewTodo } from '../../redux/actions'
 import { useState } from "react";

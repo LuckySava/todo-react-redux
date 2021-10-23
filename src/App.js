@@ -5,6 +5,7 @@ import { Switch, HashRouter, BrowserRouter as Router, Route } from 'react-router
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import style from './App.module.scss'
+import Thunk from "./pages/thunk/Thunk";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
 
             <Route path='/about'>
               <About />
+            </Route>
+
+            <Route path='/thunk'>
+              <Thunk />
             </Route>
 
           </div>
